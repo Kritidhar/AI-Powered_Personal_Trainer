@@ -38,12 +38,12 @@ A Pre-trained Model (MediaPipe Pose) is used for detection
 6. implemented a calculate_angle function using the atan2 method. This is more stable than the Law of Cosines as it accurately handles the full 360 degree rotation and prevents calculation crashes.
 7. A mathematical check ensures all angles are normalized to a human-readable $0^{\circ} - 180^{\circ}$ range, which is critical for identifying the arm's extension and contraction.
 8. To ensure accuracy and prevent "false reps," the system tracks State Changes rather than just angles:
-   Stage 1 (Down): The repetition is only initiated once the joint angle exceeds 160 degree, enforcing full muscle extension.
-   Stage 2 (Up): A rep is only incremented when the state is "Down" and the angle then drops below 30 degree. This logic effectively ignores partial movements or "cheating" form.
+   1. Stage 1 (Down): The repetition is only initiated once the joint angle exceeds 160 degree, enforcing full muscle extension.
+   2. Stage 2 (Up): A rep is only incremented when the state is "Down" and the angle then drops below 30 degree. This logic effectively ignores partial movements or "cheating" form.
 9. Temporal Analytics & Data Persistence:
-    Rep Timing: The system captures the time difference between the "Down" and "Up" states to calculate the Average Speed per repetition.
-   Automated Logging: Using Python’s csv library, the session data (Date, Time, Reps, Speed) is appended to a local workout_log.csv file, creating a persistent history for the user.
-   Post-Workout Summary: Upon exiting (pressing 'h'), the code breaks the loop and generates a dynamic black canvas using NumPy to display a final Workout Summary dashboard with a form accuracy score.
+   1. Rep Timing: The system captures the time difference between the "Down" and "Up" states to calculate the Average Speed per repetition.
+   2. Automated Logging: Using Python’s csv library, the session data (Date, Time, Reps, Speed) is appended to a local workout_log.csv file, creating a persistent history for the user.
+   3. Post-Workout Summary: Upon exiting (pressing 'h'), the code breaks the loop and generates a dynamic black canvas using NumPy to display a final Workout Summary dashboard with a form accuracy score.
 
 # Outcome
 1. 98% Accurate, successfully distinguishes between a full rep and a partial "cheat" rep.
