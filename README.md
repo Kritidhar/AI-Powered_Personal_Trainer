@@ -54,7 +54,7 @@ A Pre-trained Model (MediaPipe Pose) is used for detection
    3. Post-Workout Summary: Upon exiting (pressing 'h'), the code breaks the loop and generates a dynamic black canvas using NumPy to display a final Workout Summary dashboard with a form accuracy score.
 
 # Outcome
-1. 98% Accurate, successfully distinguishes between a full rep and a partial "cheat" rep.
+1. 98% Accurate, successfully distinguishes between a full repetition and a partial "cheat" repetition.
 
 2. Receive a post-workout summary that quantifies their effort.
 
