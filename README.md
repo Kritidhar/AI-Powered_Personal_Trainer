@@ -14,6 +14,14 @@ Real-time computer vision system that automates the tracking of physical exercis
 
 2. To provide a persistent data logging system for tracking long-term fitness progress.
 
+# Key Features
+1. Real-time Pose Estimation: Utilizes MediaPipe to track 33 body landmarks at high frame rates.
+2. Dynamic Angle Calculation: Uses NumPy and trigonometric algorithms to monitor joint movement with high precision.
+3. Smart Rep Counter: Logic-based state machine that distinguishes between "Up" and "Down" phases to prevent false counts.
+4. Live HUD (Heads-Up Display): A custom-designed UI that displays real-time reps, exercise stage, and joint angles.
+5. Post-Workout Analytics: Generates a "Summary Dashboard" upon exit, showing total reps, average speed, and form accuracy.
+6. Data Persistence: Automatically logs workout sessions to a local workout_log.csv file with timestamps.
+
 # Tech Stack
 1. Language: Python
 2. Computer Vision: OpenCV (Video capture & UI overlay)
