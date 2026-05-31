@@ -1,7 +1,9 @@
 # AI-POWERED-PERSONAL-TRAINER
 
 Real-time computer vision system that automates the tracking of physical exercises, utilizing Human Pose Estimation (HPE), the tool monitors specific joint movements to count repetitions accurately, concludes every session with a performance summary dashboard, bridging the gap between raw data and actionable fitness insights.
+
 ![Image](https://github.com/user-attachments/assets/d5b5c125-e992-4992-8814-4f3a9d08841d)
+
 # The Problem
 1. **Lack of Accuracy**: Manual rep counting is prone to human error, especially during high-intensity training.
 
